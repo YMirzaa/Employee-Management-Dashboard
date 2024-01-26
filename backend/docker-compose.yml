@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+    postgres_tubitak_database:
+        image: postgres:15.2-alpine
+        container_name: postgres_database
+        restart: always
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres
+        ports:
+            - "5432:5432"
+        volumes:
+            - ./db-init/init.sql:/docker-entrypoint-initdb.d/init.sql
+            # - ./data:/var/lib/postgresql/data
+    pg_admin_tubitak:
+        image: dpage/pgadmin4:latest
+        container_name: pg_admin
+        restart: always
+        environment:
+            PGADMIN_DEFAULT_EMAIL: ymiirza@gmail.com
+            PGADMIN_DEFAULT_PASSWORD: yusuf123
+        ports:
+            - "5050:80"
+
