@@ -8,8 +8,8 @@
 		<version>3.2.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.tubitak</groupId>
-	<artifactId>app</artifactId>
+	<groupId>com.management</groupId>
+	<artifactId>backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>app</name>
 	<description>Demo project for Spring Boot</description>

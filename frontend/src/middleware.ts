@@ -20,6 +20,9 @@ export function middleware(request: NextRequest) {
 	if (!accessToken && !isPublicRoute) {
 		return Response.redirect(new URL("/login", nextUrl));
 	}
+	if (!accessToken && nextUrl.pathname === "/") {
+		return Response.redirect(new URL("/login", nextUrl));
+	}
 
 	return NextResponse.next();
 }

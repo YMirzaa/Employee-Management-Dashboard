@@ -1,5 +1,5 @@
 CREATE
-DATABASE tubitak_db
+DATABASE employee_db
         WITH
         OWNER = postgres
         ENCODING = 'UTF8'
